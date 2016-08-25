@@ -1,6 +1,7 @@
 var User = function() {
     var async = require('async');
     var request = require('request');
+    var https = require("https");
 
     var constants = require('../libraries/constants')
     var CommonLib = require('../libraries/common').Common;
@@ -11,6 +12,7 @@ var User = function() {
     this.params = {};
     this.config = require('../config/config.js');
     var self = this;
+
 
     //Echo message
     this.echoHello = function(req, res) {
@@ -24,9 +26,26 @@ var User = function() {
         return res.status(200).json({ users: "Hello" });
     };
 
-    this.getUserListWithPagination = function (req, res) {
-      console.log("I am in getUserListWithPagination");
+    //GET GITHUB user by pagination
+    this.UsersListByRange = function(req, res) {
+        console.log("I am in UsersListByRange");
 
+        var options = {
+            url: 'https://api.github.com/users?since=135',
+            headers: {
+                'User-Agent': 'request'
+            }
+        };
+
+        function callback(error, response, body) {
+            if (!error && response.statusCode == 200) {
+                var info = JSON.parse(body);
+                console.log("info : " + JSON.stringify(body));
+                
+                return res.status(200).json({ users: info });
+            }
+        }
+        request(options, callback);
     }
 
 }

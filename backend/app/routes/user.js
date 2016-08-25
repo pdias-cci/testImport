@@ -9,7 +9,7 @@ var UserCtrl = new (require('../controllers/user')).User();
 this.config = require('../config/config.js');
 
 
-
+router.get("/UsersListByRange", UserCtrl.UsersListByRange)
 router.get("/userslist", UserCtrl.getUsersList);
 router.get("/echoHello", UserCtrl.echoHello); //... Get all users
 // router.post("/", UserCtrl.loginUser); //... Login API
