@@ -1,0 +1,122 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@3.9.5
+3 info using node@v6.2.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData request
+20 silly mapToRegistry name request
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry data Result {
+23 silly mapToRegistry   raw: 'request',
+23 silly mapToRegistry   scope: null,
+23 silly mapToRegistry   name: 'request',
+23 silly mapToRegistry   rawSpec: '',
+23 silly mapToRegistry   spec: 'latest',
+23 silly mapToRegistry   type: 'tag' }
+24 silly mapToRegistry uri https://registry.npmjs.org/request
+25 verbose get https://registry.npmjs.org/request not expired, no request
+26 silly fetchNamedPackageData No valid target from cache, forcing network
+27 verbose request uri https://registry.npmjs.org/request
+28 verbose request no auth needed
+29 info attempt registry request try #1 at 2:46:34 PM
+30 verbose request id 8b214229ada9199b
+31 http request GET https://registry.npmjs.org/request
+32 http 200 https://registry.npmjs.org/request
+33 verbose headers { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+33 verbose headers   etag: '"43L9ZBEASCILQDKM81DXLKKNC"',
+33 verbose headers   'content-type': 'application/json',
+33 verbose headers   'content-encoding': 'gzip',
+33 verbose headers   'cache-control': 'max-age=300',
+33 verbose headers   'content-length': '37085',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Thu, 25 Aug 2016 09:11:11 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   age: '98',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-sin6924-SIN',
+33 verbose headers   'x-cache': 'HIT',
+33 verbose headers   'x-cache-hits': '15',
+33 verbose headers   'x-timer': 'S1472116271.282795,VS0,VE0',
+33 verbose headers   vary: 'Accept-Encoding' }
+34 silly get cb [ 200,
+34 silly get   { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+34 silly get     etag: '"43L9ZBEASCILQDKM81DXLKKNC"',
+34 silly get     'content-type': 'application/json',
+34 silly get     'content-encoding': 'gzip',
+34 silly get     'cache-control': 'max-age=300',
+34 silly get     'content-length': '37085',
+34 silly get     'accept-ranges': 'bytes',
+34 silly get     date: 'Thu, 25 Aug 2016 09:11:11 GMT',
+34 silly get     via: '1.1 varnish',
+34 silly get     age: '98',
+34 silly get     connection: 'keep-alive',
+34 silly get     'x-served-by': 'cache-sin6924-SIN',
+34 silly get     'x-cache': 'HIT',
+34 silly get     'x-cache-hits': '15',
+34 silly get     'x-timer': 'S1472116271.282795,VS0,VE0',
+34 silly get     vary: 'Accept-Encoding' } ]
+35 verbose get saving request to C:\Users\presley\AppData\Roaming\npm-cache\registry.npmjs.org\request\.cache.json
+36 verbose correctMkdir C:\Users\presley\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+37 silly fetchPackageMetaData Error: No compatible version found: request@2.74.1
+37 silly fetchPackageMetaData Valid install targets:
+37 silly fetchPackageMetaData 2.74.0, 2.73.0, 2.72.0, 2.71.0, 2.70.0, 2.69.0, 2.68.0, 2.67.0, 2.66.0, 2.65.0, 2.64.0, 2.63.0, 2.62.0, 2.61.0, 2.60.0, 2.59.0, 2.58.0, 2.57.0, 2.56.0, 2.55.0, 2.54.0, 2.53.0, 2.52.0, 2.51.0, 2.50.0, 2.49.0, 2.48.0, 2.47.0, 2.46.0, 2.45.0, 2.44.0, 2.43.0, 2.42.0, 2.41.0, 2.40.0, 2.39.0, 2.38.0, 2.37.0, 2.36.0, 2.35.0, 2.34.0, 2.33.0, 2.32.0, 2.31.0, 2.30.0, 2.29.0, 2.28.0, 2.27.0, 2.26.0, 2.25.0, 2.24.0, 2.23.0, 2.22.0, 2.21.0, 2.20.0, 2.19.0, 2.18.0, 2.16.6, 2.16.4, 2.16.2, 2.16.0, 2.14.0, 2.12.0, 2.11.4, 2.11.3, 2.11.2, 2.11.1, 2.11.0, 2.10.0, 2.9.203, 2.9.202, 2.9.201, 2.9.200, 2.9.153, 2.9.152, 2.9.151, 2.9.150, 2.9.100, 2.9.3, 2.9.2, 2.9.1, 2.9.0, 2.2.9, 2.2.6, 2.2.5, 2.2.0, 2.1.1, 2.1.0, 2.0.5, 2.0.4, 2.0.3, 2.0.2, 2.0.1, 2.0.0, 1.9.9, 1.9.8, 1.9.7, 1.9.5, 1.9.3, 1.9.2, 1.9.1, 1.9.0, 1.2.0, 1.1.1, 1.1.0, 1.0.0, 0.10.0, 0.9.5, 0.9.1, 0.9.0, 0.8.3
+37 silly fetchPackageMetaData
+37 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (C:\Program Files\nodejs\node_modules\npm\lib\fetch-package-metadata.js:170:16)
+37 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\iferr\index.js:13:50
+37 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\lib\utils\pulse-till-done.js:19:8
+37 silly fetchPackageMetaData     at saved (C:\Program Files\nodejs\node_modules\npm\lib\cache\caching-client.js:174:7)
+37 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+37 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:117:15)
+37 silly fetchPackageMetaData  error for request@2.74.1 Error: No compatible version found: request@2.74.1
+37 silly fetchPackageMetaData Valid install targets:
+37 silly fetchPackageMetaData 2.74.0, 2.73.0, 2.72.0, 2.71.0, 2.70.0, 2.69.0, 2.68.0, 2.67.0, 2.66.0, 2.65.0, 2.64.0, 2.63.0, 2.62.0, 2.61.0, 2.60.0, 2.59.0, 2.58.0, 2.57.0, 2.56.0, 2.55.0, 2.54.0, 2.53.0, 2.52.0, 2.51.0, 2.50.0, 2.49.0, 2.48.0, 2.47.0, 2.46.0, 2.45.0, 2.44.0, 2.43.0, 2.42.0, 2.41.0, 2.40.0, 2.39.0, 2.38.0, 2.37.0, 2.36.0, 2.35.0, 2.34.0, 2.33.0, 2.32.0, 2.31.0, 2.30.0, 2.29.0, 2.28.0, 2.27.0, 2.26.0, 2.25.0, 2.24.0, 2.23.0, 2.22.0, 2.21.0, 2.20.0, 2.19.0, 2.18.0, 2.16.6, 2.16.4, 2.16.2, 2.16.0, 2.14.0, 2.12.0, 2.11.4, 2.11.3, 2.11.2, 2.11.1, 2.11.0, 2.10.0, 2.9.203, 2.9.202, 2.9.201, 2.9.200, 2.9.153, 2.9.152, 2.9.151, 2.9.150, 2.9.100, 2.9.3, 2.9.2, 2.9.1, 2.9.0, 2.2.9, 2.2.6, 2.2.5, 2.2.0, 2.1.1, 2.1.0, 2.0.5, 2.0.4, 2.0.3, 2.0.2, 2.0.1, 2.0.0, 1.9.9, 1.9.8, 1.9.7, 1.9.5, 1.9.3, 1.9.2, 1.9.1, 1.9.0, 1.2.0, 1.1.1, 1.1.0, 1.0.0, 0.10.0, 0.9.5, 0.9.1, 0.9.0, 0.8.3
+37 silly fetchPackageMetaData
+37 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (C:\Program Files\nodejs\node_modules\npm\lib\fetch-package-metadata.js:170:16)
+37 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\iferr\index.js:13:50
+37 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\lib\utils\pulse-till-done.js:19:8
+37 silly fetchPackageMetaData     at saved (C:\Program Files\nodejs\node_modules\npm\lib\cache\caching-client.js:174:7)
+37 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+37 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:117:15)
+38 silly rollbackFailedOptional Starting
+39 silly rollbackFailedOptional Finishing
+40 silly runTopLevelLifecycles Starting
+41 silly runTopLevelLifecycles Finishing
+42 silly install printInstalled
+43 verbose stack Error: No compatible version found: request@2.74.1
+43 verbose stack Valid install targets:
+43 verbose stack 2.74.0, 2.73.0, 2.72.0, 2.71.0, 2.70.0, 2.69.0, 2.68.0, 2.67.0, 2.66.0, 2.65.0, 2.64.0, 2.63.0, 2.62.0, 2.61.0, 2.60.0, 2.59.0, 2.58.0, 2.57.0, 2.56.0, 2.55.0, 2.54.0, 2.53.0, 2.52.0, 2.51.0, 2.50.0, 2.49.0, 2.48.0, 2.47.0, 2.46.0, 2.45.0, 2.44.0, 2.43.0, 2.42.0, 2.41.0, 2.40.0, 2.39.0, 2.38.0, 2.37.0, 2.36.0, 2.35.0, 2.34.0, 2.33.0, 2.32.0, 2.31.0, 2.30.0, 2.29.0, 2.28.0, 2.27.0, 2.26.0, 2.25.0, 2.24.0, 2.23.0, 2.22.0, 2.21.0, 2.20.0, 2.19.0, 2.18.0, 2.16.6, 2.16.4, 2.16.2, 2.16.0, 2.14.0, 2.12.0, 2.11.4, 2.11.3, 2.11.2, 2.11.1, 2.11.0, 2.10.0, 2.9.203, 2.9.202, 2.9.201, 2.9.200, 2.9.153, 2.9.152, 2.9.151, 2.9.150, 2.9.100, 2.9.3, 2.9.2, 2.9.1, 2.9.0, 2.2.9, 2.2.6, 2.2.5, 2.2.0, 2.1.1, 2.1.0, 2.0.5, 2.0.4, 2.0.3, 2.0.2, 2.0.1, 2.0.0, 1.9.9, 1.9.8, 1.9.7, 1.9.5, 1.9.3, 1.9.2, 1.9.1, 1.9.0, 1.2.0, 1.1.1, 1.1.0, 1.0.0, 0.10.0, 0.9.5, 0.9.1, 0.9.0, 0.8.3
+43 verbose stack
+43 verbose stack     at pickVersionFromRegistryDocument (C:\Program Files\nodejs\node_modules\npm\lib\fetch-package-metadata.js:170:16)
+43 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\iferr\index.js:13:50
+43 verbose stack     at C:\Program Files\nodejs\node_modules\npm\lib\utils\pulse-till-done.js:19:8
+43 verbose stack     at saved (C:\Program Files\nodejs\node_modules\npm\lib\cache\caching-client.js:174:7)
+43 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+43 verbose stack     at FSReqWrap.oncomplete (fs.js:117:15)
+44 verbose cwd C:\MAMP\htdocs\Angular\GitLib\backend
+45 error Windows_NT 10.0.10586
+46 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+47 error node v6.2.2
+48 error npm  v3.9.5
+49 error No compatible version found: request@2.74.1
+49 error Valid install targets:
+49 error 2.74.0, 2.73.0, 2.72.0, 2.71.0, 2.70.0, 2.69.0, 2.68.0, 2.67.0, 2.66.0, 2.65.0, 2.64.0, 2.63.0, 2.62.0, 2.61.0, 2.60.0, 2.59.0, 2.58.0, 2.57.0, 2.56.0, 2.55.0, 2.54.0, 2.53.0, 2.52.0, 2.51.0, 2.50.0, 2.49.0, 2.48.0, 2.47.0, 2.46.0, 2.45.0, 2.44.0, 2.43.0, 2.42.0, 2.41.0, 2.40.0, 2.39.0, 2.38.0, 2.37.0, 2.36.0, 2.35.0, 2.34.0, 2.33.0, 2.32.0, 2.31.0, 2.30.0, 2.29.0, 2.28.0, 2.27.0, 2.26.0, 2.25.0, 2.24.0, 2.23.0, 2.22.0, 2.21.0, 2.20.0, 2.19.0, 2.18.0, 2.16.6, 2.16.4, 2.16.2, 2.16.0, 2.14.0, 2.12.0, 2.11.4, 2.11.3, 2.11.2, 2.11.1, 2.11.0, 2.10.0, 2.9.203, 2.9.202, 2.9.201, 2.9.200, 2.9.153, 2.9.152, 2.9.151, 2.9.150, 2.9.100, 2.9.3, 2.9.2, 2.9.1, 2.9.0, 2.2.9, 2.2.6, 2.2.5, 2.2.0, 2.1.1, 2.1.0, 2.0.5, 2.0.4, 2.0.3, 2.0.2, 2.0.1, 2.0.0, 1.9.9, 1.9.8, 1.9.7, 1.9.5, 1.9.3, 1.9.2, 1.9.1, 1.9.0, 1.2.0, 1.1.1, 1.1.0, 1.0.0, 0.10.0, 0.9.5, 0.9.1, 0.9.0, 0.8.3
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
