@@ -1,0 +1,15 @@
+﻿/************************** Importing all Partial SASS Files **************************/
+@import "normalize";
+@import "variables";
+@import "fonts";
+@import "global";
+@import "utilities";
+@import "type";
+@import "forms";
+
+/*** heading ***/
+.heading{
+    h1, h2, h3, h4, h5, h6{
+        margin:0 0 20px;
+    }
+}

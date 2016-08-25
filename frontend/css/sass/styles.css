@@ -1,0 +1,626 @@
+@import url("bootstrap.min.css");
+/************************** Importing all Partial SASS Files **************************/
+/** Bootstrap css **/
+/************************* NORMALIZE ALL HTML ELEMENTS (RESET) *************************/
+/* line 6, /Creative/Project-Template/css/sass/_normalize.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/*** colors ***/
+/*** Font Family ***/
+/************************* FONTS *************************/
+/* line 2, /Creative/Project-Template/css/sass/_fonts.scss */
+.lato {
+  font-family: "Lato";
+  font-weight: 400;
+}
+
+/* line 6, /Creative/Project-Template/css/sass/_fonts.scss */
+.lato-thin {
+  font-weight: 100;
+}
+
+/* line 9, /Creative/Project-Template/css/sass/_fonts.scss */
+.lato-light {
+  font-weight: 300;
+}
+
+/* line 12, /Creative/Project-Template/css/sass/_fonts.scss */
+.lato-bold {
+  font-weight: 700;
+}
+
+/* line 15, /Creative/Project-Template/css/sass/_fonts.scss */
+.lato-ultra-bold {
+  font-weight: 900;
+}
+
+/*** global styles **/
+/* line 2, /Creative/Project-Template/css/sass/_global.scss */
+html, .wrapper {
+  height: 100%;
+}
+
+/* line 6, /Creative/Project-Template/css/sass/_global.scss */
+body {
+  background-color: #efefef;
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  color: #666666;
+}
+
+/*** header ***/
+/* line 19, /Creative/Project-Template/css/sass/_global.scss */
+header {
+  background: #3c8dbc;
+}
+/* line 21, /Creative/Project-Template/css/sass/_global.scss */
+header .navbar-default {
+  background: transparent;
+  border: 0;
+  margin: 0;
+}
+/* line 26, /Creative/Project-Template/css/sass/_global.scss */
+header .navbar-default .navbar-brand, header .navbar-default .navbar-nav > li > a, header .navbar-default .navbar-nav > li > a:focus, header .navbar-default .navbar-nav > li > a:hover, header .navbar-default .navbar-brand:focus, header .navbar-default .navbar-brand:hover, header .dropdown-menu > li > a {
+  color: white;
+}
+/* line 29, /Creative/Project-Template/css/sass/_global.scss */
+header .navbar-default .navbar-nav > .active > a, header .navbar-default .navbar-nav > .active > a:focus, header .navbar-default .navbar-nav > .active > a:hover, header .navbar-default .navbar-nav > li > a:focus, header .navbar-default .navbar-nav > li > a:hover, header .navbar-default .navbar-nav > .open > a, header .navbar-default .navbar-nav > .open > a:focus, header .navbar-default .navbar-nav > .open > a:hover, header .dropdown-menu {
+  background: #367fa9;
+  color: white;
+  border: 0;
+}
+/* line 34, /Creative/Project-Template/css/sass/_global.scss */
+header .dropdown-menu > li > a:focus, header .dropdown-menu > li > a:hover {
+  background: #3c8dbc;
+  color: white;
+}
+/* line 38, /Creative/Project-Template/css/sass/_global.scss */
+header .dropdown-menu > li > a {
+  padding: 10px 20px;
+}
+/* line 41, /Creative/Project-Template/css/sass/_global.scss */
+header .navbar-brand {
+  font-size: 1.25rem;
+}
+/* line 44, /Creative/Project-Template/css/sass/_global.scss */
+header .navbar-nav > li > a {
+  font-size: .87rem;
+}
+
+/*** footer ***/
+/* line 50, /Creative/Project-Template/css/sass/_global.scss */
+footer {
+  background: #e1e1e1;
+  padding: 16.5px 0;
+}
+/* line 53, /Creative/Project-Template/css/sass/_global.scss */
+footer p {
+  font-size: .75rem;
+  font-weight: 900;
+}
+
+/*** content area ***/
+/* line 60, /Creative/Project-Template/css/sass/_global.scss */
+main {
+  height: calc(100% - 140px);
+  margin: 20px 0;
+}
+/* line 63, /Creative/Project-Template/css/sass/_global.scss */
+main .container {
+  height: 100%;
+}
+/* line 65, /Creative/Project-Template/css/sass/_global.scss */
+main .container .well {
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+  height: 100%;
+  border-radius: 0;
+  background: white;
+}
+/* line 72, /Creative/Project-Template/css/sass/_global.scss */
+main .container .well > h3 {
+  margin-bottom: 20px;
+}
+
+/*** tabs ***/
+/* line 81, /Creative/Project-Template/css/sass/_global.scss */
+.nav-tabs > li > a {
+  border-radius: 0;
+  font-size: 14px;
+  color: #666666;
+}
+
+/* line 88, /Creative/Project-Template/css/sass/_global.scss */
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+  color: #666666;
+  background-color: #eee;
+}
+/* line 92, /Creative/Project-Template/css/sass/_global.scss */
+.nav-pills > li > a {
+  color: #666666;
+  border-radius: 0;
+  font-size: 14px;
+  padding: 5px 15px;
+}
+
+/* line 99, /Creative/Project-Template/css/sass/_global.scss */
+.tab-content {
+  padding: 15px;
+  min-height: 100px;
+  font-size: 14px;
+}
+/* line 103, /Creative/Project-Template/css/sass/_global.scss */
+.tab-content.tab {
+  border: 1px solid #ddd;
+  border-top: 0;
+}
+
+/*** modal ***/
+/* line 111, /Creative/Project-Template/css/sass/_global.scss */
+.modal .modal-content {
+  box-shadow: none;
+  border: 0;
+}
+/* line 115, /Creative/Project-Template/css/sass/_global.scss */
+.modal .modal-dialog {
+  margin: 0 auto;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) !important;
+  -ms-transform: translate(-50%, -50%) !important;
+  -moz-transform: translate(-50%, -50%) !important;
+  -o-transform: translate(-50%, -50%) !important;
+  transform: translate(-50%, -50%) !important;
+}
+/* line 122, /Creative/Project-Template/css/sass/_global.scss */
+.modal .modal-header {
+  border: 0;
+  line-height: 1;
+}
+/* line 126, /Creative/Project-Template/css/sass/_global.scss */
+.modal .modal-title {
+  font-size: 1.31rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+/* line 131, /Creative/Project-Template/css/sass/_global.scss */
+.modal .modal-footer {
+  border: 0;
+  text-align: center;
+}
+/* line 135, /Creative/Project-Template/css/sass/_global.scss */
+.modal .modal-header, .modal .modal-body, .modal .modal-footer {
+  padding: 20px;
+}
+
+/*** all utility classes ***/
+/*** width ***/
+/* line 4, /Creative/Project-Template/css/sass/_utilities.scss */
+.width100 {
+  width: 100%;
+}
+
+/*** extras ***/
+/* line 9, /Creative/Project-Template/css/sass/_utilities.scss */
+.cursor, .glyphicon, a {
+  cursor: pointer;
+}
+
+/*** Padding ***/
+/* line 14, /Creative/Project-Template/css/sass/_utilities.scss */
+.no-padding {
+  padding: 0 !important;
+}
+
+/*** Margin ***/
+/* line 20, /Creative/Project-Template/css/sass/_utilities.scss */
+.no-margin {
+  margin: 0;
+}
+
+/* line 2, /Creative/Project-Template/css/sass/_type.scss */
+h1, .h1 {
+  font-size: 1.37rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* line 7, /Creative/Project-Template/css/sass/_type.scss */
+h2, .h2 {
+  font-size: 1.21rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* line 12, /Creative/Project-Template/css/sass/_type.scss */
+h3, .h3 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* line 17, /Creative/Project-Template/css/sass/_type.scss */
+h4, .h4 {
+  font-size: 1.06rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* line 22, /Creative/Project-Template/css/sass/_type.scss */
+h5, .h5 {
+  font-size: .87rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* line 27, /Creative/Project-Template/css/sass/_type.scss */
+h6, .h6 {
+  font-size: .73rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* line 33, /Creative/Project-Template/css/sass/_type.scss */
+.text-right {
+  text-align: right !important;
+}
+
+/* line 36, /Creative/Project-Template/css/sass/_type.scss */
+em {
+  font-style: italic;
+}
+
+/* line 39, /Creative/Project-Template/css/sass/_type.scss */
+strong {
+  font-weight: 900;
+}
+
+/*** placeholder - dark ***/
+/* line 3, /Creative/Project-Template/css/sass/_forms.scss */
+input.placeholder-dark::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #efefef !important;
+}
+
+/* line 6, /Creative/Project-Template/css/sass/_forms.scss */
+input.placeholder-dark::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #efefef !important;
+}
+
+/* line 9, /Creative/Project-Template/css/sass/_forms.scss */
+input.placeholder-dark:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #efefef !important;
+}
+
+/* line 12, /Creative/Project-Template/css/sass/_forms.scss */
+input.placeholder-dark:-moz-placeholder {
+  /* Firefox 18- */
+  color: #efefef !important;
+}
+
+/* line 16, /Creative/Project-Template/css/sass/_forms.scss */
+.form-control {
+  border-color: #d2d6de;
+  border-radius: 0;
+  box-shadow: none;
+}
+/* line 20, /Creative/Project-Template/css/sass/_forms.scss */
+.form-control:focus {
+  outline: 0;
+  box-shadow: none;
+  border-color: #d2d6de;
+}
+
+/* line 28, /Creative/Project-Template/css/sass/_forms.scss */
+.has-error .form-control {
+  border-color: #ee4a2f;
+}
+/* line 31, /Creative/Project-Template/css/sass/_forms.scss */
+.has-error p {
+  color: #ee4a2f;
+  margin-top: 5px;
+}
+
+/*** buttons ***/
+/* line 38, /Creative/Project-Template/css/sass/_forms.scss */
+button, .btn, .btn:focus, .btn:active:focus {
+  outline: 0;
+}
+
+/* line 41, /Creative/Project-Template/css/sass/_forms.scss */
+.btn-success {
+  background: #758f1d;
+  color: white;
+}
+/* line 44, /Creative/Project-Template/css/sass/_forms.scss */
+.btn-success:hover, .btn-success:active, .btn-success:focus {
+  background: #687f1b;
+}
+
+/* line 49, /Creative/Project-Template/css/sass/_forms.scss */
+.btn-link {
+  color: #3c8dbc;
+  font-size: .81rem;
+  text-decoration: underline;
+}
+
+/* line 54, /Creative/Project-Template/css/sass/_forms.scss */
+.btn-link-delete {
+  color: #ee4a2f;
+  font-weight: 700;
+}
+/* line 57, /Creative/Project-Template/css/sass/_forms.scss */
+.btn-link-delete span {
+  margin: 0 7px 0 0;
+  position: relative;
+  top: 1px;
+}
+/* line 62, /Creative/Project-Template/css/sass/_forms.scss */
+.btn-link-delete:hover, .btn-link-delete:active, .btn-link-delete:focus {
+  color: #ee4a2f;
+}
+
+/* line 66, /Creative/Project-Template/css/sass/_forms.scss */
+.btn-default {
+  background: #efefef;
+}
+
+/* line 69, /Creative/Project-Template/css/sass/_forms.scss */
+.btn:active {
+  box-shadow: none;
+}
+
+/*** checkbox ***/
+/* line 75, /Creative/Project-Template/css/sass/_forms.scss */
+.checkbox {
+  float: left;
+  margin: 0 60px 0 0;
+  width: 20px;
+}
+/* line 79, /Creative/Project-Template/css/sass/_forms.scss */
+.checkbox label {
+  background: white;
+  border: 1px solid #d2d6de;
+  cursor: pointer;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20px;
+  border-radius: 2px;
+  padding-left: 0;
+  min-height: inherit;
+}
+/* line 92, /Creative/Project-Template/css/sass/_forms.scss */
+.checkbox::after {
+  opacity: 0;
+}
+/* line 95, /Creative/Project-Template/css/sass/_forms.scss */
+.checkbox input[type="checkbox"] {
+  visibility: hidden;
+  margin: 0;
+}
+/* line 99, /Creative/Project-Template/css/sass/_forms.scss */
+.checkbox input[type="checkbox"]:checked + label::after {
+  background: transparent none repeat scroll 0 0;
+  border-color: #666666;
+  border-image: none;
+  border-style: none none solid solid;
+  border-width: medium medium 2px 2px;
+  content: "";
+  height: 6px;
+  left: 3px;
+  position: absolute;
+  top: 5px;
+  -webkit-transform: rotate(-50deg);
+  -ms-transform: rotate(-50deg);
+  -moz-transform: rotate(-50deg);
+  -o-transform: rotate(-50deg);
+  transform: rotate(-50deg);
+  width: 12px;
+  opacity: 1;
+}
+
+/* line 115, /Creative/Project-Template/css/sass/_forms.scss */
+.checkbox + label {
+  padding-left: 27px;
+  font-size: .875rem;
+}
+
+/* line 120, /Creative/Project-Template/css/sass/_forms.scss */
+label {
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+/*** radio ***/
+/* line 125, /Creative/Project-Template/css/sass/_forms.scss */
+.radio {
+  margin: 0;
+  /* border for radio */
+  /* active radio */
+  /* the checked style using the :checked pseudo class */
+}
+/* line 127, /Creative/Project-Template/css/sass/_forms.scss */
+.radio label {
+  display: block;
+  cursor: pointer;
+  line-height: 2.5;
+  font-size: 0.875rem;
+  padding-left: 0;
+}
+/* line 134, /Creative/Project-Template/css/sass/_forms.scss */
+.radio input[type="radio"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* line 144, /Creative/Project-Template/css/sass/_forms.scss */
+.radio [type="radio"] + span {
+  display: block;
+}
+/* line 148, /Creative/Project-Template/css/sass/_forms.scss */
+.radio [type="radio"] + span:after {
+  border-radius: 1em;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  border: 1px solid #d2d6de;
+}
+/* line 159, /Creative/Project-Template/css/sass/_forms.scss */
+.radio:nth-of-type(1) [type="radio"] + span:after {
+  top: 9px\0;
+}
+/* line 163, /Creative/Project-Template/css/sass/_forms.scss */
+.radio [type="radio"] + span:before {
+  border-radius: 1em;
+  content: "";
+  display: inline-block;
+  height: 10px;
+  left: 5px;
+  margin-right: 15px;
+  position: relative;
+  top: -5px;
+  vertical-align: -5px;
+  width: 10px;
+}
+/* line 176, /Creative/Project-Template/css/sass/_forms.scss */
+.radio [type="radio"]:checked + span:before {
+  background: #666666;
+}
+/* line 179, /Creative/Project-Template/css/sass/_forms.scss */
+.radio + .radio {
+  margin: 0;
+  margin-left: 30px;
+}
+
+/*** select ***/
+/* line 187, /Creative/Project-Template/css/sass/_forms.scss */
+select, select.form-control {
+  background: white url("../../images/down-arrow.svg") no-repeat scroll calc(100% - 10px) center;
+  background-size: 13px 8px;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 0 none;
+  color: #666666;
+  cursor: pointer;
+  height: 33px;
+  padding: 6px 10px;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1;
+  border-radius: 0;
+  border: 1px solid #d2d6de;
+}
+
+/* line 203, /Creative/Project-Template/css/sass/_forms.scss */
+select::-ms-expand {
+  display: none;
+}
+
+/*** datepicker ***/
+/* line 208, /Creative/Project-Template/css/sass/_forms.scss */
+.datepicker.dropdown-menu, .ui-datepicker {
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid #d2d6de;
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+  display: none;
+  font-size: 14px;
+  left: 0;
+  margin: 2px 0 0;
+  padding: 5px 10px;
+  text-align: center;
+  top: 100%;
+  right: inherit;
+  cursor: pointer;
+}
+/* line 223, /Creative/Project-Template/css/sass/_forms.scss */
+.datepicker.dropdown-menu th, .ui-datepicker th {
+  text-align: center;
+}
+/* line 226, /Creative/Project-Template/css/sass/_forms.scss */
+.datepicker.dropdown-menu .ui-state-default, .ui-datepicker .ui-state-default {
+  border: 0;
+  background: none;
+  text-align: center;
+}
+/* line 230, /Creative/Project-Template/css/sass/_forms.scss */
+.datepicker.dropdown-menu .ui-state-default:hover, .ui-datepicker .ui-state-default:hover {
+  background: #ccc;
+}
+/* line 234, /Creative/Project-Template/css/sass/_forms.scss */
+.datepicker.dropdown-menu .ui-datepicker-header, .ui-datepicker .ui-datepicker-header {
+  border: 0;
+  background: none;
+}
+/* line 238, /Creative/Project-Template/css/sass/_forms.scss */
+.datepicker.dropdown-menu .ui-state-highlight, .ui-datepicker .ui-state-highlight {
+  background: #ccc;
+}
+/* line 241, /Creative/Project-Template/css/sass/_forms.scss */
+.datepicker.dropdown-menu .ui-state-hover, .ui-datepicker .ui-state-hover {
+  border: none;
+  background: none;
+}
+/* line 245, /Creative/Project-Template/css/sass/_forms.scss */
+.datepicker.dropdown-menu .ui-datepicker-next-hover, .ui-datepicker .ui-datepicker-next-hover {
+  right: 2px;
+  top: 2px;
+}
+/* line 249, /Creative/Project-Template/css/sass/_forms.scss */
+.datepicker.dropdown-menu .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-prev-hover {
+  left: 2px;
+  top: 2px;
+}
+
+/** textarea **/
+/* line 256, /Creative/Project-Template/css/sass/_forms.scss */
+textarea.form-control {
+  height: 100px;
+}
+
+/***search ***/
+/* line 261, /Creative/Project-Template/css/sass/_forms.scss */
+input.search {
+  background: url("../../images/search.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
+}
+
+/*** heading ***/
+/* line 12, styles.scss */
+.heading h1, .heading h2, .heading h3, .heading h4, .heading h5, .heading h6 {
+  margin: 0 0 20px;
+}

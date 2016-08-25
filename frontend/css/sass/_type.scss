@@ -1,0 +1,41 @@
+
+h1, .h1{
+    font-size:1.37rem;
+    font-weight:$lato-bold;
+    line-height: 1;
+}
+h2, .h2{
+    font-size:1.21rem;
+    font-weight:$lato-bold;
+    line-height: 1;
+}
+h3, .h3{
+    font-size:1.12rem;
+    font-weight:$lato-bold;
+    line-height: 1;
+}
+h4, .h4{
+    font-size:1.06rem;
+    font-weight:$lato-bold;
+    line-height: 1;
+}
+h5, .h5{
+    font-size:.87rem;
+    font-weight:$lato-bold;
+    line-height: 1;
+}
+h6, .h6{
+    font-size:.73rem;
+    font-weight:$lato-bold;
+    line-height: 1;
+}
+
+.text-right{
+    text-align:right !important;
+}
+em{
+    font-style:italic;
+}
+strong{
+    font-weight:$lato-ultra-bold;
+}

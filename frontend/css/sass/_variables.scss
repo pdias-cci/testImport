@@ -1,0 +1,31 @@
+﻿/*** colors ***/
+$brand-white: #ffffff;
+$brand-black: #000000;
+$brand-blue:#3c8dbc;
+$brand-blue-md:#c6dde7;
+$brand-blue-lt:#e2eef3;
+$brand-gray:#efefef;
+$brand-gray-dk:#666666;
+$brand-orange:#ee4a2f;
+$brand-button-blue: #337ab7;
+$brand-button-green:#758f1d;
+$brand-border: #dadada;
+$brand-form:#d2d6de;
+
+/*** Font Family ***/
+$lato: 'Lato';
+$lato-thin: 100;
+$lato-light: 300;
+$lato-regular: 400;
+$lato-bold:700;
+$lato-ultra-bold:900;
+
+
+/// Mixin to prefix several properties at once
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}

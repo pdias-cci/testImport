@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html class="ie8"><![endif]-->
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Form | Template Project</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no"> <!-- REMOVES TELEPHONE FORMATTING ON DEVICES -->
+    <!-- Stylesheets -->
+    <!--<link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">-->
+    <!-- google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/sass/styles.css">
+    <!-- remove this if you use Modernizr -->
+    <script>(function (e, t, n) { var r = e.querySelectorAll("html")[0]; r.className = r.className.replace(/(^|\s)no-js(\s|$)/, "$1js$2") })(document, window, 0);</script>
+</head>
+<body>
+    <!-- **************************************************** -->
+    <!-- **************** | HEADER | ************************ -->
+    <!-- **************************************************** -->
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="javascript:void(0);">LittleHoots <strong>2.0</strong></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav pull-right">
+                            <li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+                            <li class="active"><a href="javascript:void(0);">Forms</a></li>
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tabs Styles <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="tab.html">Tabs</a></li>
+                                    <li><a href="tab-pills.html">Pills</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="accordion.html">Accordion</a></li>
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Table <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="table.html">Default</a></li>
+                                    <li><a href="table-striped.html">Striped</a></li>
+                                    <li><a href="table-bordered.html">Bordered</a></li>
+                                    <li><a href="table-hover.html">Hover</a></li>
+                                    <li><a href="table-condensed.html">Condensed</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="popup.html">Modal Popup</a></li>
+
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+    </header>
+    <!-- **************************************************** -->
+    <!-- **************************************************** -->
+
+
+    <!-- **************************************************** -->
+    <!-- **************** | CONTENT | *********************** -->
+    <!-- **************************************************** -->
+    <main>
+        <div class="container">
+            <div class="well">
+                <div class="row">
+                    <h3 class="col-sm-6">Forms</h3>
+                    <div class="col-sm-3 pull-right">
+                        <input type="text" class="search form-control" placeholder="Search" />
+                    </div>
+                </div>
+                <hr/>
+                <div class="content">
+                    <form class="row">
+                        <div class="form-group col-sm-6">
+                            <label>Email address</label>
+                            <input type="text" class="form-control" placeholder="Enter email"/>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label>Password</label>
+                            <input type="password" class="form-control" placeholder="Enter password" />
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label>Company</label>
+                            <select class="form-control">
+                                <option></option>
+                                <option>CCI</option>
+                                <option>OPSPL</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label>Type</label>
+                            <div class="clearfix"></div>
+                            <div class="radio pull-left">
+                                <label for="optionsRadios1">
+                                    <input type="radio" value="optionsRadios1" name="option1" id="optionsRadios1"> <span>Goverment</span>
+                                </label>
+                            </div>
+                            <div class="radio pull-left">
+                                <label for="optionsRadios2">
+                                    <input type="radio" value="optionsRadios2" name="option1" id="optionsRadios2"> <span>Private</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6 has-error">
+                            <label>Message</label>
+                            <textarea placeholder="Error formatting" class="form-control"></textarea>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-group  col-sm-6">
+                            <div class="checkbox-container">
+                                <div class="checkbox">
+                                    <input value="None" id="checkbox1" name="check" type="checkbox">
+                                    <label for="checkbox1"></label>
+                                </div>
+                                <label for="checkbox1">Remember Me</label>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-xs-12">
+                            <button class="btn btn-default pull-left">Cancel</button>
+                            <button class="btn btn-primary pull-right">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- **************************************************** -->
+    <!-- **************************************************** -->
+
+
+    <!-- **************************************************** -->
+    <!-- **************** | FOOTER | ************************ -->
+    <!-- **************************************************** -->
+    <footer>
+        <div class="container">
+            <p>&copy; Creative Capsule Infotech 2017</p>
+        </div>
+    </footer>
+    <!-- **************************************************** -->
+    <!-- **************************************************** -->
+
+    <!-- **************************************************** -->
+    <!-- **************** | SCRIPTS | *********************** -->
+    <!-- **************************************************** -->
+    <script type="text/javascript" src="js/jquery-2.2.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.custom-file-input.js"></script>
+    <!-- **************************************************** -->
+    <!-- **************************************************** -->
+</body>
+</html>
