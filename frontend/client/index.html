@@ -1,0 +1,31 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="Gitlib">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="env/environment.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js'></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-controller="launchScreen">
+    <div class="container-fluid">
+        <!-- HEADER AND NAVBAR -->
+        <header>
+        </header>
+        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+        <div id="main">
+            <div ng-view>
+                
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="controllers/launchScreen.js"></script>
+<script src="controllers/loginController.js"></script>
+
+</html>
