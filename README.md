@@ -1,0 +1,2 @@
+# GitLib
+GitLib in MEAN
