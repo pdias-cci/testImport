@@ -8,55 +8,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-   
     <script src="env/environment.js"></script>
     <script src="assets/js/angular.min.js"></script>
     <script src='assets/js/angular-animate.min.js'></script>
     <script src='assets/js/angular-route.min.js'></script>
     <script src="app.js"></script>
-
     <title>GitLib 1.0</title>
+    <!-- Core CSS -->
+    <link href="assets/vendor/materialize/css/materialize.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Theme CSS -->
-    <link href="assets/css/freelancer.min.css" rel="stylesheet">
-
+    <link href="assets/css/custom.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
-        <!-- HEADER AND NAVBAR -->
-        <header>
-                <nav ng-include="'pages/navbar.html'" ng-controller="launchScreen"></nav>
-        </header>
+
 <body ng-controller="launchScreen">
     <div class="container-fluid">
-
+        <!-- HEADER AND NAVBAR -->
+        <header>
+            <nav ng-include="'pages/navbar.html'" ng-controller="launchScreen"></nav>
+        </header>
         <!-- MAIN CONTENT AND INJECTED VIEWS -->
         <div id="main">
             <div ng-view>
-                
-                
             </div>
         </div>
+
+                <!-- HEADER AND NAVBAR -->
+        <footer class="page-footer">
+            <nav ng-include="'pages/footer.html'" ng-controller="launchScreen"></nav>
+        </footer>
     </div>
 </body>
-
-
-
-
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="assets/vendor/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="assets/vendor/materialize/js/materialize.min.js"></script>
 <script src="controllers/launchScreen.js"></script>
 <script src="controllers/loginController.js"></script>
 

@@ -13,11 +13,13 @@
         .module(window.__env.MainAppName)
         .controller('launchScreen', launchScreen);
 
-    launchScreen.$inject = ['$scope', '$rootScope'];
+    launchScreen.$inject = ['$scope', '$location'];
 
-    function launchScreen($scope, $rootScope) {
+    function launchScreen($scope, $location) {
         $scope.message = 'This is the launchScreen';
 
+        $scope.gotoLogin = function() {
+            $location.url('/login');
+        }
     }
-
 })();
