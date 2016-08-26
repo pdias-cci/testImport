@@ -38,16 +38,17 @@
         <header>
             <nav ng-include="'pages/navbar.html'" ng-controller="launchScreen"></nav>
         </header>
-        <!-- MAIN CONTENT AND INJECTED VIEWS -->
-        <div id="main">
-            <div ng-view>
+        <main>
+            <!-- MAIN CONTENT AND INJECTED VIEWS -->
+            <div id="main">
+                <div ng-view>
+                </div>
             </div>
-        </div>
-
+        </main>
                 <!-- HEADER AND NAVBAR -->
-        <footer class="page-footer">
+        <!-- <footer class="page-footer">
             <nav ng-include="'pages/footer.html'" ng-controller="launchScreen"></nav>
-        </footer>
+        </footer> -->
     </div>
 </body>
 <!--Import jQuery before materialize.js-->

@@ -1,48 +1,36 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-xs-6">
-            <h1 class="form-signin-heading">Sign in</h1>
-            <p class="lead">Not a member? Please <a href="#register">register</a> instead.</p>
-            <form ng-submit="login()" name = "loginform">
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="credentials.email" name="txtEmail" required>
+        <div class="row center-align">
+            <div class="divider"></div>
+            <div class="section">
+                <div class="col s12">
+                    <img src="assets/images/octocat_800x600.png" class="responsive-img" align="middle">
                 </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" ng-model="credentials.password" required>
-                </div>
-                    <button type="button" class="btn btn-link" data-toggle="modal" ng-click="getPasswordHint()" data-target="#resetPasswordModal"
-                    ng-disabled="loginform.txtEmail.$invalid" >Reset password</button>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" ng-model="credentials.rememberme" ng-init="credentials.rememberme=false">Remember me</label>
-                </div>
-                <button type="submit" class="btn btn-default">Sign in!</button>
-            </form>
-        </div>
-        <div class="modal fade" id="resetPasswordModal" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div ng-if="IsEmailFound === true">
-                            <p>{{msgPasswordResetHelpMessage}}</p>
-                            <p>{{msgPasswordResetHint}}: <b> {{passwordHint}} </b> </p>
-                        </div>
-                        <div ng-if="IsEmailFound === false">
-                            <p>{{msgPasswordResetIdNotRegistered}}</p>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <ul class="list-group">
-                            <div class="list-group text-center"> 
-                                <a href="#" class="list-group-item list-group-item-action" data-dismiss="modal">Try Again</a>
-                                <a href="#" class="list-group-item list-group-item-action" data-dismiss="modal" ng-click="sendForgotEmail()">Reset Password</a>
+            </div>
+            <div class="divider"></div>
+            <div class="section">
+                <h5>GitLib</h5>
+                <p>Your AngularJs GitHub website!</p>
+            </div>
+            <div class="section">
+                <div class="row center-align">
+                    <div class="col s12">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="username" type="text" class="validate" ng-model="username" required>
+                                    <label for="username">you're GitHub username</label>
+                                </div>
                             </div>
+                            <div class="row">
+                                <button class="btn waves-effect waves-light" type="button" ng-click="clearUserName()">Clear
+                                    <i class="fa fa-eraser"></i>
+                                </button>
+                                <button class="btn waves-effect waves-light" ng-click="gotoLogin()">Get In
+                                    <i class="fa fa-github-alt"></i>
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

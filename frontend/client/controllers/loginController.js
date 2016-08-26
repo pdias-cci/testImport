@@ -20,9 +20,14 @@
         .module(window.__env.MainAppName)
         .controller('loginController', loginController);
 
-    loginController.$inject = ['$location', '$scope', '$window'];
+    loginController.$inject = ['$location', '$scope'];
 
-    function loginController($location, $scope, $window) {
+    function loginController($location, $scope) {
+
+        $scope.clearUserName = function(){
+            $scope.username ="";
+
+        }
     }
 
 })();
