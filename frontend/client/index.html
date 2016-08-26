@@ -8,17 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <script src="env/environment.js"></script>
-    <script src="assets/js/angular.min.js"></script>
-    <script src='assets/js/angular-animate.min.js'></script>
-    <script src='assets/js/angular-route.min.js'></script>
-    <script src="app.js"></script>
     <title>GitLib 1.0</title>
     <!-- Core CSS -->
     <link href="assets/vendor/materialize/css/materialize.min.css" rel="stylesheet">
-
-
     <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="assets/css/animation.css" rel="stylesheet">
+    
     <!-- Custom Fonts -->
     <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
@@ -41,16 +36,21 @@
         <main>
             <!-- MAIN CONTENT AND INJECTED VIEWS -->
             <div id="main">
-                <div ng-view>
+                <div ng-view class="slide-animation">
                 </div>
             </div>
         </main>
-                <!-- HEADER AND NAVBAR -->
+        <!-- HEADER AND NAVBAR -->
         <!-- <footer class="page-footer">
             <nav ng-include="'pages/footer.html'" ng-controller="launchScreen"></nav>
         </footer> -->
     </div>
 </body>
+<script src="env/environment.js"></script>
+<script src="assets/js/angular.min.js"></script>
+<script src='assets/js/angular-animate.min.js'></script>
+<script src='assets/js/angular-route.min.js'></script>
+<script src="app.js"></script>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="assets/vendor/jquery/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="assets/vendor/materialize/js/materialize.min.js"></script>
