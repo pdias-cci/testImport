@@ -21,12 +21,22 @@
             console.log("Get user by Name")
 
             generalservice.getProfile("slaay")
-            .success(function(data) {
-                console.log("data : " + data);
-            })
-            .error(function(err) {
-                console.log("Error " + err);
-            })
+                .success(function(data) {
+                    console.log("data : " + JSON.stringify(data));
+                    var jsonData = data.users;
+                    console.log("login name : " + jsonData.login);
+                    console.log(" id : " + jsonData.id);
+                    console.log(" url : " + jsonData.url);
+                    console.log(" name : " + jsonData.name);
+                    console.log(" company : " + jsonData.company);
+                    console.log(" email : " + jsonData.email);
+
+                    $scope.username = jsonData.name;
+
+                })
+                .error(function(err) {
+                    console.log("Error " + err);
+                })
         }
     }
 })();
