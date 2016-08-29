@@ -1,13 +1,7 @@
 var User = function() {
     var async = require('async');
     var request = require('request');
-    var https = require("https");
-
-    var constants = require('../libraries/constants')
-    var CommonLib = require('../libraries/common').Common;
-
-    var path = require('path');
-    var md5 = require('md5');
+    var constants = require('../libraries/constants');
 
     this.params = {};
     var self = this;
@@ -47,6 +41,34 @@ var User = function() {
             }
         }
         request(options, callback);
+    }
+
+    //GET GITHUB user by the username on Github
+    //CAL : https://api.github.com/users/slaay
+    this.getUserByDetailsName = function (req, res) {
+
+        var userName = req.query.value;
+        console.log(" I am in getUserByDetailsName : " + userName);
+
+        var options = {
+            url: 'https://api.github.com/users/' + userName,
+            headers: {
+                'User-Agent': 'request'
+            }
+        };
+
+        function callback(error, response, body) {
+            if (!error && response.statusCode == 200) {
+                var info = JSON.parse(body);
+                //console.log("info : " + JSON.stringify(body));
+                return res.status(200).json({ users: info });
+            } else
+            {
+                return res.status(404).json({ users: constants.constUserNotFound});
+            }
+        }
+        request(options, callback);
+
     }
 
 }

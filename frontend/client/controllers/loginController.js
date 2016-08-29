@@ -28,6 +28,11 @@
             $scope.username ="";
 
         }
+
+        $scope.gotoUserProfileByName = function(){
+            console.log("User name : " +  $scope.username);
+            $location.url('/profile');
+        }
     }
 
 })();

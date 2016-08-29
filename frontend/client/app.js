@@ -13,6 +13,12 @@ Gitlib.config(function($routeProvider) {
         templateUrl: 'pages/login.html',
         controller: 'loginController'
     })
+
+    .when('/profile', {
+        templateUrl: 'pages/userProfile.html',
+        controller: 'userProfileController'
+    })
+
     .otherwise({
         redirectTo: '/'
     });

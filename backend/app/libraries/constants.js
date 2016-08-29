@@ -6,12 +6,5 @@
 
 module.exports = Object.freeze({
 
-    //Token Expiry in days
-    constRememberMeTokenExpiry: 30,
-    constNormalTokenExpiry: 1,
-
-
-    //Is token valid 
-    constTokenIsValid: true,
-    ConstTokenIsNotValid: false
+   constUserNotFound: "No user found with the user name you entered.",
 });
