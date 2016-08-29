@@ -47,28 +47,30 @@ var User = function() {
     //CAL : https://api.github.com/users/slaay
     this.getUserByDetailsName = function (req, res) {
 
-        var userName = req.query.value;
-        console.log(" I am in getUserByDetailsName : " + userName);
+        // var userName = req.query.value;
+        // console.log(" I am in getUserByDetailsName : " + userName);
 
-        var options = {
-            url: 'https://api.github.com/users/' + userName,
-            headers: {
-                'User-Agent': 'request'
-            }
-        };
+        // var options = {
+        //     url: 'https://api.github.com/users/' + userName,
+        //     headers: {
+        //         'User-Agent': 'request'
+        //     }
+        // };
 
-        function callback(error, response, body) {
-            if (!error && response.statusCode == 200) {
-                var info = JSON.parse(body);
-                //console.log("info : " + JSON.stringify(body));
-                return res.status(200).json({ users: info });
-            } else
-            {
-                return res.status(404).json({ users: constants.constUserNotFound});
-            }
-        }
-        request(options, callback);
-
+        // function callback(error, response, body) {
+        //     if (!error && response.statusCode == 200) {
+        //         var info = JSON.parse(body);
+        //         console.log("info : " + JSON.stringify(body));
+        //         return res.status(200).json({ users: info });
+        //     } else
+        //     {   
+        //         console.log("error : " + error);
+        //         return res.status(404).json({ users: constants.constUserNotFound});
+        //     }
+        // }
+        // request(options, callback);
+        console.log("I m here echoHello");
+        return res.status(200).json({ echo: "Hello world" });
     }
 
 }
