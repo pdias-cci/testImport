@@ -15,10 +15,10 @@
             <div class="section">
                 <div class="row center-align">
                     <div class="col s12">
-                        <form class="col s12">
+                        <form class="col s12" name="frmUserName">
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="username" type="text" class="validate" ng-model="username" required>
+                                    <input id="username" type="text" class="validate" ng-model="username" ng-required="true">
                                     <label for="username">your GitHub username</label>
                                 </div>
                             </div>
@@ -26,7 +26,7 @@
                                 <button class="btn waves-effect waves-light" type="button" ng-click="clearUserName()">Clear
                                     <i class="fa fa-eraser"></i>
                                 </button>
-                                <button class="btn waves-effect waves-light" ng-click="gotoUserProfileByName()">Get In
+                                <button class="btn waves-effect waves-light" ng-click="frmUserName.$valid && gotoUserProfileByName()">Get In
                                     <i class="fa fa-github-alt"></i>
                                 </button>
                             </div>

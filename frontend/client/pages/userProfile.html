@@ -1,32 +1,21 @@
-<div class="container">
+<div class="container" ng-init="userByName()">
     <div class="row">
         <div class="row center-align">
             <div class="divider"></div>
             <div class="section">
                 <div class="col s12">
-                    <img src="assets/images/octocat_800x600.png" class="responsive-img" align="middle">
+                    <img src="assets/images/placeholder.png" class="responsive-img" align="middle">
                 </div>
             </div>
             <div class="divider"></div>
             <div class="section">
-                <h5>{{}}</h5>
+                <h5>{{username}}</h5>
                 <p>GitHub profile info</p>
             </div>
             <div class="section">
                 <div class="row center-align">
                     <div class="col s12">
                         <form class="col s12">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="username" type="text" class="validate" ng-model="username" required>
-                                    <label for="username">you're GitHub username</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <button class="btn waves-effect waves-light" type="button" ng-click="userByName()">Get Profile
-                                    <i class="fa fa-eraser"></i>
-                                </button>
-                            </div>
                         </form>
                     </div>
                 </div>

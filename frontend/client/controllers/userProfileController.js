@@ -13,14 +13,15 @@
         .module(window.__env.MainAppName)
         .controller('userProfileController', userProfileController);
 
-    userProfileController.$inject = ['$scope', '$location', 'generalservice'];
+    userProfileController.$inject = ['$scope', '$location', 'generalservice', '$rootScope'];
 
-    function userProfileController($scope, $location, generalservice) {
+    function userProfileController($scope, $location, generalservice, $rootScope) {
 
-        $scope.userByName = function($scope) {
-            console.log("Get user by Name")
+        $scope.username = "";
+        console.log("$rootScope.username : " + $rootScope.username);
 
-            generalservice.getProfile("slaay")
+        $scope.userByName = function() {
+            generalservice.getProfile($rootScope.username)
                 .success(function(data) {
                     console.log("data : " + JSON.stringify(data));
                     var jsonData = data.users;
@@ -30,7 +31,7 @@
                     console.log(" name : " + jsonData.name);
                     console.log(" company : " + jsonData.company);
                     console.log(" email : " + jsonData.email);
-
+                    console.log(" Avatar : " + jsonData.avatar_url);
                     $scope.username = jsonData.name;
 
                 })

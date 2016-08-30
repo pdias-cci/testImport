@@ -20,9 +20,9 @@
         .module(window.__env.MainAppName)
         .controller('loginController', loginController);
 
-    loginController.$inject = ['$location', '$scope'];
+    loginController.$inject = ['$location', '$scope', '$rootScope'];
 
-    function loginController($location, $scope) {
+    function loginController($location, $scope, $rootScope) {
 
         $scope.clearUserName = function(){
             $scope.username ="";
@@ -30,6 +30,7 @@
         }
 
         $scope.gotoUserProfileByName = function(){
+            $rootScope.username = $scope.username;
             console.log("User name : " +  $scope.username);
             $location.url('/profile');
         }

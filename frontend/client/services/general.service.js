@@ -13,7 +13,7 @@
   function generalservice ($http, $window) {
 
     getProfile = function(user) {
-      return $http.get(window.__env.FullURL + '/user/userByName?value=slaay').success(function(data){
+      return $http.get(window.__env.FullURL + '/user/userByName?value=' + user).success(function(data){
         console.log("The data + " + data);
       });
     };
