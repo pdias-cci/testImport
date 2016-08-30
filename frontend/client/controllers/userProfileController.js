@@ -16,8 +16,13 @@
     userProfileController.$inject = ['$scope', '$location', 'generalservice', '$rootScope'];
 
     function userProfileController($scope, $location, generalservice, $rootScope) {
-
+        $scope.loginName = "";
         $scope.username = "";
+        $scope.avatarUrl = "assets/images/placeholder.png";
+        $scope.email = "";
+        $scope.company = "";
+        $scope.blog = "";
+
         console.log("$rootScope.username : " + $rootScope.username);
 
         $scope.userByName = function() {
@@ -32,8 +37,15 @@
                     console.log(" company : " + jsonData.company);
                     console.log(" email : " + jsonData.email);
                     console.log(" Avatar : " + jsonData.avatar_url);
-                    $scope.username = jsonData.name;
+                    console.log(" blog : " + jsonData.blog);
 
+
+                    $scope.username = jsonData.name;
+                    $scope.avatarUrl = jsonData.avatar_url;
+                    $scope.loginName = jsonData.login;
+                    $scope.email = jsonData.email;
+                    $scope.company = jsonData.company;
+                    $scope.blog = jsonData.blog;
                 })
                 .error(function(err) {
                     console.log("Error " + err);
