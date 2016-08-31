@@ -23,7 +23,9 @@
         $scope.company = "";
         $scope.blog = "";
         $scope.html_url = "";
-
+        $scope.followers = "";
+        $scope.following = "";
+        $scope.public_repos = "";
 
         console.log("$rootScope.username : " + $rootScope.username);
 
@@ -41,6 +43,9 @@
                     console.log(" Avatar : " + jsonData.avatar_url);
                     console.log(" blog : " + jsonData.blog);
                     console.log(" html_url : " + jsonData.html_url);
+                    console.log(" public_repos : " + jsonData.public_repos);
+                    console.log(" followers : " + jsonData.followers);
+                    console.log(" following : " + jsonData.following);
 
                     $scope.username = jsonData.name;
                     $scope.avatarUrl = jsonData.avatar_url;
@@ -49,6 +54,10 @@
                     $scope.company = jsonData.company;
                     $scope.blog = jsonData.blog;
                     $scope.html_url = jsonData.html_url;
+                    $scope.followers = jsonData.followers;
+                    $scope.following = jsonData.following;
+                    $scope.public_repos = jsonData.public_repos;
+
                 })
                 .error(function(err) {
                     console.log("Error " + err);
