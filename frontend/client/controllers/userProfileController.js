@@ -13,9 +13,7 @@
         .module(window.__env.MainAppName)
         .controller('userProfileController', userProfileController);
 
-    userProfileController.$inject = ['$scope', '$location', 'generalservice', '$rootScope'];
 
-    function userProfileController($scope, $location, generalservice, $rootScope) {
         $scope.loginName = "";
         $scope.username = "";
         $scope.avatarUrl = "assets/images/placeholder.png";
@@ -62,6 +60,16 @@
                 .error(function(err) {
                     console.log("Error " + err);
                 })
+        }
+
+        $scope.OpenURl = function(url) {
+            console.log("url" + url);
+
+            var prefix = 'http://';
+            if (url.substr(0, prefix.length) !== prefix) {
+                url = prefix + url;
+            }
+            $window.open(url, '_blank');
         }
     }
 })();
