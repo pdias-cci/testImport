@@ -1,4 +1,4 @@
-var Gitlib = angular.module('Gitlib', ['ngRoute', 'ngAnimate']);
+var Gitlib = angular.module('Gitlib', ['ngRoute', 'ngAnimate', 'infinite-scroll']);
 
 // configure our routes
 Gitlib.config(function($routeProvider) {

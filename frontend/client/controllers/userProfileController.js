@@ -29,7 +29,7 @@
 
         $scope.repositoriesList = [];
         $scope.page = 1;
-        $scope.per_page = 3;
+        $scope.per_page = 8;
 
         console.log("$rootScope.username : " + $rootScope.username);
 
@@ -50,7 +50,7 @@
                     $scope.public_repos = jsonData.public_repos;
 
                     //Get repos infor
-                    $scope.repositoriesByUserName($rootScope.username, 1, 3);
+                    $scope.repositoriesByUserName($rootScope.username, $scope.page, $scope.per_page);
                 })
                 .error(function(err) {
                     console.log("Error " + err);
@@ -80,6 +80,12 @@
                 .error(function(err) {
                     console.log("Error " + err);
                 })
+        }
+
+        $scope.scrollingPaginate = function() {
+            console.log("I am here! scrollingPaginate!!");
+            $scope.page = $scope.page + 1;
+            $scope.repositoriesByUserName($rootScope.username, $scope.page, $scope.per_page);
         }
     }
 })();
