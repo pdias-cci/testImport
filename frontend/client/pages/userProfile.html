@@ -1,32 +1,47 @@
 <div class="container" ng-init="userByName()">
     <div class="row">
-        <div class="row center-align">
-            <div class="divider"></div>
-            <div class="section">
-                <div class="col s12">
-                    <img ng-src="{{avatarUrl}}" class="circle responsive-img" height="64" width="64 align=" middle ">
+        <!-- code start -->
+        <div class="twPc-div">
+            <a class="twPc-bg twPc-block"></a>
+            <div>
+                <div class="twPc-button">
+                    <a href={{html_url}} class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false" data-dnt="true">Follow @{{username}}</a>
                 </div>
-            </div>
-            <div class="divider "></div>
-            <div class="section ">
-                <div class="col s12">
-                 <div class="center-align"> <p>GitHub profile info</p> </div>
-                    <ul class="collection ">
-                      <li class="collection-item center-align"><h5>{{username}}</h5></li>
-                      <li class="collection-item left-align">{{loginName}}</li>
-                      <li class="collection-item left-align">{{company}}</li>
-                      <li class="collection-item left-align">{{email}}</li>
-                      <li class="collection-item left-align">{{blog}}</li>
-                    </ul>
-                  </div>
-            </div>
-            <div class="section">
-                <div class="row center-align">
-                    <div class="col s12">
-  
+                <a title="{{username}}" class="twPc-avatarLink">
+                    <img alt="Mert Salih Kaplan" ng-src="{{avatarUrl}}" class="twPc-avatarImg">
+                </a>
+                <div class="twPc-divUser">
+                    <div class="twPc-divName">
+                        <a>{{username}}</a>
                     </div>
+                    <span>
+        <a>@<span>{{loginName}}</span></a>
+                    </span>
+                </div>
+                <div class="twPc-divStats">
+                    <ul class="twPc-Arrange">
+                        <li class="twPc-ArrangeSizeFit">
+                            <a href="https://twitter.com/mertskaplan" title="9.840 Tweet">
+                                <span class="twPc-StatLabel twPc-block">Tweets</span>
+                                <span class="twPc-StatValue">9.840</span>
+                            </a>
+                        </li>
+                        <li class="twPc-ArrangeSizeFit">
+                            <a href="https://twitter.com/mertskaplan/following" title="885 Following">
+                                <span class="twPc-StatLabel twPc-block">Following</span>
+                                <span class="twPc-StatValue">885</span>
+                            </a>
+                        </li>
+                        <li class="twPc-ArrangeSizeFit">
+                            <a href="https://twitter.com/mertskaplan/followers" title="1.810 Followers">
+                                <span class="twPc-StatLabel twPc-block">Followers</span>
+                                <span class="twPc-StatValue">1.810</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+        <!-- code end -->
     </div>
 </div>

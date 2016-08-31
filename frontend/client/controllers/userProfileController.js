@@ -22,6 +22,8 @@
         $scope.email = "";
         $scope.company = "";
         $scope.blog = "";
+        $scope.html_url = "";
+
 
         console.log("$rootScope.username : " + $rootScope.username);
 
@@ -38,7 +40,7 @@
                     console.log(" email : " + jsonData.email);
                     console.log(" Avatar : " + jsonData.avatar_url);
                     console.log(" blog : " + jsonData.blog);
-
+                    console.log(" html_url : " + jsonData.html_url);
 
                     $scope.username = jsonData.name;
                     $scope.avatarUrl = jsonData.avatar_url;
@@ -46,6 +48,7 @@
                     $scope.email = jsonData.email;
                     $scope.company = jsonData.company;
                     $scope.blog = jsonData.blog;
+                    $scope.html_url = jsonData.html_url;
                 })
                 .error(function(err) {
                     console.log("Error " + err);
