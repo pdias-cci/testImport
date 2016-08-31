@@ -5,7 +5,7 @@
 var express = require('express');
 var router = express.Router();
 
-var UserCtrl = new(require('../controllers/user')).User();
+var UserCtrl = new(require('../controllers/userController')).User();
 
 
 router.get("/userByName", UserCtrl.getUserByDetailsName);

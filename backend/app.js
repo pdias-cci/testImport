@@ -8,6 +8,7 @@ var envConfig = require('./app/config/config.env.js');
 
 var routes = require('./app/routes/index');
 var user = require('./app/routes/user');
+var repository = require('./app/routes/repository');
 
 //It instantiates Express and assigns our app variable to it
 var app = express();
@@ -31,6 +32,7 @@ app.use(function(req, res, next){
 });
 
 app.use('/user', user); 
+app.use('/repository', repository); 
 app.use('/', routes);
 
 module.exports = app;

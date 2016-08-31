@@ -7,4 +7,5 @@
 module.exports = Object.freeze({
 
    constUserNotFound: "No user found with the user name you entered.",
+   constNoRepositoryFound: "No repository for the given user found."
 });
