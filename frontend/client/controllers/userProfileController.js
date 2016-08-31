@@ -13,7 +13,9 @@
         .module(window.__env.MainAppName)
         .controller('userProfileController', userProfileController);
 
+    userProfileController.$inject = ['$scope', 'generalservice', '$rootScope', '$window'];
 
+    function userProfileController($scope, generalservice, $rootScope, $window) {
         $scope.loginName = "";
         $scope.username = "";
         $scope.avatarUrl = "assets/images/placeholder.png";
