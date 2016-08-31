@@ -5,19 +5,40 @@
             <a class="twPc-bg twPc-block"></a>
             <div>
                 <div class="twPc-button">
-                    <a href={{html_url}} class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false" data-dnt="true">
-                      <i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;{{username}}   
+                    <a href={{html_url}} class="twitter-follow-button">
+                        <i class="fa fa-code-fork" aria-hidden="true"></i>&nbsp;{{login}}
                     </a>
                 </div>
-                <a title="{{username}}" class="twPc-avatarLink">
-                    <img alt="{{username}}" ng-src="{{avatarUrl}}" class="twPc-avatarImg">
+                <a title="{{name}}" class="twPc-avatarLink">
+                    <img alt="{{name}}" ng-src="{{avatar_Url}}" class="twPc-avatarImg">
                 </a>
                 <div class="twPc-divUser">
                     <div class="twPc-divName">
-                        <a>{{username}}</a>
+                        <a>{{name}}</a>
                     </div>
+                    <!--company email blog  -->
                     <span>
-                      <a>@<span>{{loginName}}</span></a> <a>@<span>{{loginName}}</span></a> <a>@<span>{{loginName}}</span></a>
+                      <!-- Company -->
+                      <a data-toggle="modal" data-target="#companyModal">
+                        <span>
+                          <i class="fa fa-users" aria-hidden="true"></i> 
+
+                        </span>
+                    </a>
+                    <!-- Email -->
+                    <a data-toggle="modal" data-target="#emailModal">
+                        <span>
+                          <i class="fa fa-envelope" aria-hidden="true"></i>
+
+                        </span>
+                    </a>
+                    <!-- blog -->
+                    <a data-toggle="modal" data-target="#blogModal">
+                        <span>
+                          <i class="fa fa-internet-explorer" aria-hidden="true"></i>
+
+                        </span>
+                    </a>
                     </span>
                 </div>
                 <div class="twPc-divStats">
@@ -45,5 +66,62 @@
             </div>
         </div>
         <!-- code end -->
+
+        <!-- Company modal -->
+        <div class="modal fade" id="companyModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Company name</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{company}}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <!-- Email modal -->
+        <div class="modal fade" id="emailModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Email</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>{{email}}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <!-- blog modal -->
+        <div class="modal fade" id="blogModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Website/blog</h4>
+                    </div>
+                    <div class="modal-body">
+                        <a href="{{blog}}"></a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

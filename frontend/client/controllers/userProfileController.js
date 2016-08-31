@@ -47,9 +47,9 @@
                     console.log(" followers : " + jsonData.followers);
                     console.log(" following : " + jsonData.following);
 
-                    $scope.username = jsonData.name;
-                    $scope.avatarUrl = jsonData.avatar_url;
-                    $scope.loginName = jsonData.login;
+                    $scope.name = jsonData.name;
+                    $scope.avatar_Url = jsonData.avatar_url;
+                    $scope.login = jsonData.login;
                     $scope.email = jsonData.email;
                     $scope.company = jsonData.company;
                     $scope.blog = jsonData.blog;
