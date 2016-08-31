@@ -1,39 +1,39 @@
 <div class="container">
     <div class="row">
-        <div class="row center-align">
-            <div class="divider"></div>
-            <div class="section">
-                <div class="col s12">
-                    <img src="assets/images/octocat_800x600.png" class="responsive-img" align="middle">
-                </div>
+        <div class="row">
+            <div class="col s12">
+                <img src="assets/images/octocat_800x600.png" class="img-responsive" align="middle">
             </div>
-            <div class="divider"></div>
-            <div class="section">
-                <h5>GitLib</h5>
-                <p>Your AngularJs GitHub website!</p>
-            </div>
-            <div class="section">
-                <div class="row center-align">
-                    <div class="col s12">
-                        <form class="col s12" name="frmUserName">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="username" type="text" class="validate" ng-model="username" ng-required="true">
-                                    <label for="username">your GitHub username</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <button class="btn waves-effect waves-light" type="button" ng-click="clearUserName()">Clear
-                                    <i class="fa fa-eraser"></i>
-                                </button>
-                                <button class="btn waves-effect waves-light" ng-click="frmUserName.$valid && gotoUserProfileByName()">Get In
-                                    <i class="fa fa-github-alt"></i>
-                                </button>
-                            </div>
-                        </form>
+        </div>
+        <hr style="width: 100%; color: black; height: 1px; background-color:gray;" />
+        <div class="row">
+            <h5 class="text-center">GitLib</h5>
+            <p class="text-center">Your AngularJs GitHub website!</p>
+        </div>
+        <div class="row">
+            <form name="frmUserName">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon3">@</span>
+                            <input type="text" class="form-control pull-centre" placeholder="your GitHub username" aria-describedby="sizing-addon3" ng-required="true" ng-model="username">
+                        </div>
                     </div>
                 </div>
-            </div>
+             <hr style="width: 100%; color: black; height: 1px; background-color:white;" />
+                <div class="row">
+                    <div class="col-xs-6">
+                        <button class="btn pull-right" type="button" ng-click="clearUserName()">Clear
+                            <i class="fa fa-eraser"></i>
+                        </button>
+                    </div>
+                   <div class="col-xs-6">
+                        <button class="btn pull-left" ng-click="frmUserName.$valid && gotoUserProfileByName()">Get In
+                            <i class="fa fa-github-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
