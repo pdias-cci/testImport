@@ -27,6 +27,10 @@
         $scope.following = "";
         $scope.public_repos = "";
 
+        $scope.repositoriesList = [];
+        $scope.page = 1;
+        $scope.per_page = 3;
+
         console.log("$rootScope.username : " + $rootScope.username);
 
         $scope.userByName = function() {
@@ -45,9 +49,8 @@
                     $scope.following = jsonData.following;
                     $scope.public_repos = jsonData.public_repos;
 
-
                     //Get repos infor
-                    $scope.repositoriesByUserName($rootScope.username);
+                    $scope.repositoriesByUserName($rootScope.username, 1, 3);
                 })
                 .error(function(err) {
                     console.log("Error " + err);
@@ -64,11 +67,8 @@
             $window.open(url, '_blank');
         }
 
-        $scope.repositoriesByUserName = function(username) {
-            $scope.repositoriesList = [];
-
-
-            generalservice.getRepositoryDetails(username)
+        $scope.repositoriesByUserName = function(username, page, per_page) {
+            generalservice.getRepositoryDetails(username, page, per_page)
                 .success(function(data) {
                     var repoList = data.repository;
 

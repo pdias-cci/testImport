@@ -16,13 +16,23 @@ var Repo = function() {
         return res.status(200).json({ echo: "repoController say Hi" });
     };
 
-    // Get the details of all the users repositories (public)
-    // URL to GET is https://api.github.com/users/<Github User Name>/repos
+     /* Get the details of all the users repositories (public)
+        URL to GET is https://api.github.com/users/<Github User Name>/repos
+        For pagination use this method
+        https://api.github.com/users/<Github User Name>/repos?per_page=1&page=2
+        per_page -> How many items i want per page.
+        page -> All the items will be divided by per_page and that many number of pages will
+        be available to get.
+    */
     this.getRepositoryDetails = function(req, res) {
         console.log("I am getting getRepositoryDetails");
 
         var repositoryOwner = req.query.value;
-        var fullRespositoryURL = "https://api.github.com/users/" + repositoryOwner + "/repos";
+        var page = req.query.page;
+        var per_page = req.query.per_page;
+
+        var fullRespositoryURL = "https://api.github.com/users/" + repositoryOwner 
+          + "/repos?per_page=" + per_page + "&page=" + page;
 
         console.log("repositoryOwner: " + repositoryOwner);
 

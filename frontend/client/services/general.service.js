@@ -19,8 +19,9 @@
     };
 
 
-    getRepositoryDetails = function(user) {
-    return $http.get(window.__env.FullURL + '/repository/repositoryDetails?value=' + user)
+    getRepositoryDetails = function(user, page, per_page) {
+    return $http.get(window.__env.FullURL + '/repository/repositoryDetails?value='
+      + user + "&page=" + page + "&per_page=" + per_page)
         .success(function(data) {
             console.log("The repository data : " + data);
         })
