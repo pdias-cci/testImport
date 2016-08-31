@@ -17,9 +17,21 @@
         console.log("The data + " + data);
       });
     };
+
+
+    getRepositoryDetails = function(user) {
+    return $http.get(window.__env.FullURL + '/repository/repositoryDetails?value=' + user)
+        .success(function(data) {
+            console.log("The repository data : " + data);
+        })
+        .error(function(error) {
+            console.log("The error data : " + error);
+        });
+     };
    
     return {
-      getProfile : getProfile
+      getProfile : getProfile,
+      getRepositoryDetails : getRepositoryDetails
     };
   }
 

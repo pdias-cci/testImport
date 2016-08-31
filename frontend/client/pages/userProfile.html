@@ -73,20 +73,23 @@
                 <div class="panel-body">
                     <!-- Repository list here -->
                      <div class="comments-list">
-                       <div class="media">
-                           <p class="pull-right">
-                             <small><i class="fa fa-star" aria-hidden="true"></i></small>
-                           </p>
-                            <a class="media-left">
-                              <i class="fa fa-code-fork" aria-hidden="true"></i>
-                            </a>
-                            <div class="media-body">
-                                
-                              <h4 class="media-heading user_name">Repo name</h4>
-                               repo description here!
+                      
+                       <div ng-repeat="repository in repositoriesList"> 
+                            <div class="media">
+                               <p class="pull-right">
+                                 <small><i class="fa fa-star" aria-hidden="true"></i></small>
+                               </p>
+                                <a class="media-left">
+                                  <i class="fa fa-code-fork" aria-hidden="true"></i>
+                                </a>
+                                <div class="media-body">
+                                    
+                                  <h4 class="media-heading user_name">{{repository.full_name}}</h4>
+                                   {{repository.description}}
+                                </div>
                             </div>
-                          </div>
-                      </div>
+                       </div>
+                     </div>
                 </div>
             </div>
         </div>

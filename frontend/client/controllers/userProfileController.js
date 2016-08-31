@@ -34,19 +34,6 @@
                 .success(function(data) {
                     console.log("data : " + JSON.stringify(data));
                     var jsonData = data.users;
-                    console.log("login name : " + jsonData.login);
-                    console.log(" id : " + jsonData.id);
-                    console.log(" url : " + jsonData.url);
-                    console.log(" name : " + jsonData.name);
-                    console.log(" company : " + jsonData.company);
-                    console.log(" email : " + jsonData.email);
-                    console.log(" Avatar : " + jsonData.avatar_url);
-                    console.log(" blog : " + jsonData.blog);
-                    console.log(" html_url : " + jsonData.html_url);
-                    console.log(" public_repos : " + jsonData.public_repos);
-                    console.log(" followers : " + jsonData.followers);
-                    console.log(" following : " + jsonData.following);
-
                     $scope.name = jsonData.name;
                     $scope.avatar_Url = jsonData.avatar_url;
                     $scope.login = jsonData.login;
@@ -58,6 +45,9 @@
                     $scope.following = jsonData.following;
                     $scope.public_repos = jsonData.public_repos;
 
+
+                    //Get repos infor
+                    $scope.repositoriesByUserName($rootScope.username);
                 })
                 .error(function(err) {
                     console.log("Error " + err);
@@ -72,6 +62,24 @@
                 url = prefix + url;
             }
             $window.open(url, '_blank');
+        }
+
+        $scope.repositoriesByUserName = function(username) {
+            $scope.repositoriesList = [];
+
+
+            generalservice.getRepositoryDetails(username)
+                .success(function(data) {
+                    var repoList = data.repository;
+
+                    for (var i = 0; i < repoList.length; i++) {
+                        $scope.repositoriesList.push(repoList[i]);
+
+                    }
+                })
+                .error(function(err) {
+                    console.log("Error " + err);
+                })
         }
     }
 })();
