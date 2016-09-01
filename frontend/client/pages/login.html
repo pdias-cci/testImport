@@ -22,13 +22,18 @@
                 </div>
              <hr style="width: 100%; color: black; height: 1px; background-color:white;" />
                 <div class="row">
-                    <div class="col-xs-6">
-                        <button class="btn pull-right" type="button" ng-click="clearUserName()">Clear
+                    <div class="col-xs-4">
+                        <button class="btn pull-right btn-success" type="button" ng-click="clearUserName()">Clear
                             <i class="fa fa-eraser"></i>
                         </button>
                     </div>
-                   <div class="col-xs-6">
-                        <button class="btn pull-left" ng-click="frmUserName.$valid && gotoUserProfileByName()">Get In
+                   <div class="col-xs-4">
+                        <button class="btn pull-center btn-success" ng-click="frmUserName.$valid && gotoUserProfileByName()">Get In
+                            <i class="fa fa-github-alt"></i>
+                        </button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="btn pull-left btn-success" ng-click="frmUserName.$valid && gotoUserProfileByName()">profile
                             <i class="fa fa-github-alt"></i>
                         </button>
                     </div>
