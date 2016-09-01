@@ -43,6 +43,10 @@
                 })
         }
 
+        $scope.isEmptyString = function (str) {
+            return typeof str == 'string' && !str.trim() || typeof str == 'undefined' || str === null;
+        }
+
         $scope.OpenURl = function(url) {
             console.log("url" + url);
 
@@ -59,11 +63,18 @@
                 generalservice.getRepositoryDetails(username, page, per_page)
                     .success(function(data) {
                         var repoList = data.repository;
+                        var trucatedDescription = "";
 
                         if (repoList.length == 0) {
                             $scope.isTheScrollEnd = true;
                         } else {
                             for (var i = 0; i < repoList.length; i++) {
+      
+                                if (!$scope.isEmptyString(repoList[i].description)) {
+                                    //Truncate the description to max 30 characters
+                                    trucatedDescription = (repoList[i].description).substring(0, 30) + '..';
+                                    repoList[i].description = trucatedDescription;
+                                }
                                 $scope.repositoriesList.push(repoList[i]);
 
                             }
