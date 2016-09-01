@@ -30,6 +30,7 @@
         $scope.repositoriesList = [];
         $scope.page = 1;
         $scope.per_page = 8;
+        $scope.isTheScrollEnd = false;
 
         console.log("$rootScope.username : " + $rootScope.username);
 
@@ -49,7 +50,7 @@
                     $scope.following = jsonData.following;
                     $scope.public_repos = jsonData.public_repos;
 
-                    //Get repos infor
+                    //Get the first few repositories
                     $scope.repositoriesByUserName($rootScope.username, $scope.page, $scope.per_page);
                 })
                 .error(function(err) {
@@ -68,18 +69,25 @@
         }
 
         $scope.repositoriesByUserName = function(username, page, per_page) {
+           
+           if ($scope.isTheScrollEnd == false) {
             generalservice.getRepositoryDetails(username, page, per_page)
                 .success(function(data) {
                     var repoList = data.repository;
 
-                    for (var i = 0; i < repoList.length; i++) {
-                        $scope.repositoriesList.push(repoList[i]);
+                   if (repoList.length == 0) {
+                        $scope.isTheScrollEnd = true;
+                    } else {
+                        for (var i = 0; i < repoList.length; i++) {
+                            $scope.repositoriesList.push(repoList[i]);
 
-                    }
+                           }
+                     }
                 })
                 .error(function(err) {
                     console.log("Error " + err);
                 })
+            }
         }
 
         $scope.scrollingPaginate = function() {
