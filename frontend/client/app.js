@@ -1,3 +1,8 @@
+/*
+    Description : This is the main page of the app. Add all the routes here, all the dependencies.
+    Author : PresleyDias
+*/
+
 var Gitlib = angular.module('Gitlib', ['ngRoute', 'ngAnimate', 'infinite-scroll']);
 
 // configure our routes

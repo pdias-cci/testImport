@@ -1,39 +1,27 @@
 /*
-    Description : This controller is for users authentication.
+    Description : This controller will handle the user authentication. Since we do not have login
+    We will only use this to get the user name entered by the user.
+    Author : PresleyDias
 */
 (function() {
 
-    // Default environment variables
-    var __env = {};
+    function loginController($location, $scope, $rootScope, constants) {
 
-    // Import variables if present
-    if (window) {
-        Object.assign(__env, window.__env);
-    }
-
-    var __const = {};
-    if (window) {
-        Object.assign(__const, window.__const);
-    }
-
-    angular
-        .module(window.__env.MainAppName)
-        .controller('loginController', loginController);
-
-    loginController.$inject = ['$location', '$scope', '$rootScope'];
-
-    function loginController($location, $scope, $rootScope) {
-
-        $scope.clearUserName = function(){
-            $scope.username ="";
+        $scope.clearUserName = function() {
+            $scope.username = "";
 
         }
 
-        $scope.gotoUserProfileByName = function(){
+        $scope.gotoUserProfileByName = function() {
             $rootScope.username = $scope.username;
-            console.log("User name : " +  $scope.username);
+            console.log("User name : " + $scope.username);
             $location.url('/profile');
         }
     }
 
+    loginController.$inject = ['$location', '$scope', '$rootScope', 'constants'];
+
+    angular
+        .module(constants.constAppName)
+        .controller('loginController', loginController);
 })();

@@ -1,25 +1,17 @@
+/*
+    Description : This controller will the app launch screen only.
+    Author : PresleyDias
+*/
 (function() {
 
-    // Default environment variables
-    var __env = {};
-
-    // Import variables if present
-    if (window) {
-        Object.assign(__env, window.__env);
-    }
-
-
-    angular
-        .module(window.__env.MainAppName)
-        .controller('launchScreen', launchScreen);
-
-    launchScreen.$inject = ['$scope', '$location'];
-
-    function launchScreen($scope, $location) {
-        $scope.message = 'This is the launchScreen';
-
+    function launchScreen($scope, $location, constants) {
         $scope.gotoLogin = function() {
             $location.url('/login');
         }
     }
+    
+    launchScreen.$inject = ['$scope', '$location', 'constants'];
+    angular
+        .module(constants.constAppName)
+        .controller('launchScreen', launchScreen);
 })();

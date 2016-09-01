@@ -1,21 +1,9 @@
+/*
+    Description : This controller will handle all the user's profile related details.
+    Author : PresleyDias
+*/
 (function() {
-
-    // Default environment variables
-    var __env = {};
-
-    // Import variables if present
-    if (window) {
-        Object.assign(__env, window.__env);
-    }
-
-
-    angular
-        .module(window.__env.MainAppName)
-        .controller('userProfileController', userProfileController);
-
-    userProfileController.$inject = ['$scope', 'generalservice', '$rootScope', '$window'];
-
-    function userProfileController($scope, generalservice, $rootScope, $window) {
+    function userProfileController($scope, generalservice, $rootScope, $window, constants) {
         $scope.loginName = "";
         $scope.username = "";
         $scope.avatarUrl = "assets/images/placeholder.png";
@@ -32,12 +20,9 @@
         $scope.per_page = 8;
         $scope.isTheScrollEnd = false;
 
-        console.log("$rootScope.username : " + $rootScope.username);
-
         $scope.userByName = function() {
             generalservice.getProfile($rootScope.username)
                 .success(function(data) {
-                    console.log("data : " + JSON.stringify(data));
                     var jsonData = data.users;
                     $scope.name = jsonData.name;
                     $scope.avatar_Url = jsonData.avatar_url;
@@ -69,31 +54,36 @@
         }
 
         $scope.repositoriesByUserName = function(username, page, per_page) {
-           
-           if ($scope.isTheScrollEnd == false) {
-            generalservice.getRepositoryDetails(username, page, per_page)
-                .success(function(data) {
-                    var repoList = data.repository;
 
-                   if (repoList.length == 0) {
-                        $scope.isTheScrollEnd = true;
-                    } else {
-                        for (var i = 0; i < repoList.length; i++) {
-                            $scope.repositoriesList.push(repoList[i]);
+            if ($scope.isTheScrollEnd == false) {
+                generalservice.getRepositoryDetails(username, page, per_page)
+                    .success(function(data) {
+                        var repoList = data.repository;
 
-                           }
-                     }
-                })
-                .error(function(err) {
-                    console.log("Error " + err);
-                })
+                        if (repoList.length == 0) {
+                            $scope.isTheScrollEnd = true;
+                        } else {
+                            for (var i = 0; i < repoList.length; i++) {
+                                $scope.repositoriesList.push(repoList[i]);
+
+                            }
+                        }
+                    })
+                    .error(function(err) {
+                        console.log("Error " + err);
+                    })
             }
         }
 
         $scope.scrollingPaginate = function() {
-            console.log("I am here! scrollingPaginate!!");
             $scope.page = $scope.page + 1;
             $scope.repositoriesByUserName($rootScope.username, $scope.page, $scope.per_page);
         }
     }
+
+
+    userProfileController.$inject = ['$scope', 'generalservice', '$rootScope', '$window', 'constants'];
+    angular
+        .module(constants.constAppName)
+        .controller('userProfileController', userProfileController);
 })();
