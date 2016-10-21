@@ -24,6 +24,11 @@ Gitlib.config(function($routeProvider) {
         controller: 'userProfileController'
     })
 
+    .when('/statics', {
+        templateUrl: 'pages/statistics.html',
+        controller: 'statisticsController'
+    })
+
     .otherwise({
         redirectTo: '/'
     });

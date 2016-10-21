@@ -47,14 +47,11 @@
                         <div class="col-md-1" style="background:white">&nbsp;</div>
                     </div>
                 </div>
-                <div ng-view class="slide-animation">
+                <!-- User class="slide-animation" for slide animation -->
+                <div ng-view>
                 </div>
             </div>
         </main>
-        <!-- HEADER AND NAVBAR -->
-        <!-- <footer class="page-footer">
-            <nav ng-include="'pages/footer.html'" ng-controller="launchScreen"></nav>
-        </footer> -->
     </div>
 </body>
 <script src="assets/js/angular.min.js"></script>
@@ -67,6 +64,7 @@
 <script src="controllers/launchScreen.js"></script>
 <script src="controllers/loginController.js"></script>
 <script src="controllers/userProfileController.js"></script>
+<script src="controllers/statisticsController.js"></script>
 <script src="services/general.service.js"></script>
 
 </html>

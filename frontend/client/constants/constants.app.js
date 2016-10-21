@@ -6,6 +6,6 @@
 
 var constants = {
     constAppName: 'Gitlib',
-    constFullURL: 'http://localhost' + ':' + '3000'
+    constFullURL: 'http://localhost' + ':' + '8000'
 };
 angular.module('Gitlib').constant('constants', constants);
